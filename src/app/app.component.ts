@@ -1,12 +1,15 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class AppComponent {
+  @Input() buttonText: string = 'Submit your contact form';
+
   @Output() formData = new EventEmitter<{
     firstName: string;
     lastName: string;
