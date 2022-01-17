@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Website</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="http://localhost:8080/elements/styles.css" rel="stylesheet" />
+  </head>
+  <body class="mat-typography">
+    <h1>Please fill in the contact form to join my site!</h1>
+
+    <contact-form></contact-form>
+
+    <script defer src="http://localhost:8080/elements/elements.js"></script>
+
+    <script>
+      document
+        .querySelector("contact-form")
+        .addEventListener("formData", (event) => {
+          console.log(event);
+        });
+    </script>
+  </body>
+</html>
